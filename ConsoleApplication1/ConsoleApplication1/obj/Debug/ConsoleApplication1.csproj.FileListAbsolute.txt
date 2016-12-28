@@ -10,3 +10,6 @@ C:\Users\DJani\Source\Repos\First VS C_sharp\ConsoleApplication1\ConsoleApplicat
 C:\Users\djani\Documents\Sources\VisualStudio2015\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
 C:\Users\djani\Documents\Sources\VisualStudio2015\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\djani\Documents\Sources\VisualStudio2015\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\DJani\Source\Repos\VisualStudio2015\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\DJani\Source\Repos\VisualStudio2015\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\DJani\Source\Repos\VisualStudio2015\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

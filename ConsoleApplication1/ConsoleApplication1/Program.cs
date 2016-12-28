@@ -105,6 +105,6 @@ namespace ConsoleApplication1
         }
 
         static void somethingnew()
-        { Console.WriteLine("yeeey"); }
+        { Console.WriteLine("yeeey it works"); }
     }
 }
