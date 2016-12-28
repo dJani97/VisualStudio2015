@@ -106,5 +106,9 @@ namespace ConsoleApplication1
 
         static void somethingnew()
         { Console.WriteLine("yeeey it works"); }
+
+
+        static void somethingnew2()
+        { Console.WriteLine("Hello GitHub!"); }
     }
 }
