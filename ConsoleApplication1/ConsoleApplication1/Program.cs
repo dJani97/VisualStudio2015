@@ -104,16 +104,5 @@ namespace ConsoleApplication1
             }
         }
 
-        static void somethingnew()
-        { Console.WriteLine("yeeey it works"); }
-
-<<<<<<< HEAD
-        static void somethingnew3()
-        { Console.WriteLine("Hello World!"); }
-=======
-
-        static void somethingnew2()
-        { Console.WriteLine("Hello GitHub!"); }
->>>>>>> origin/master
     }
 }
