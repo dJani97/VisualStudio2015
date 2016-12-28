@@ -1,0 +1,6 @@
+C:\Users\djani\Documents\Sources\VisualStudio2015\C_sharp Tutorial\C_sharp Tutorial\bin\Debug\C_sharp Tutorial.exe.config
+C:\Users\djani\Documents\Sources\VisualStudio2015\C_sharp Tutorial\C_sharp Tutorial\bin\Debug\C_sharp Tutorial.exe
+C:\Users\djani\Documents\Sources\VisualStudio2015\C_sharp Tutorial\C_sharp Tutorial\bin\Debug\C_sharp Tutorial.pdb
+C:\Users\djani\Documents\Sources\VisualStudio2015\C_sharp Tutorial\C_sharp Tutorial\obj\Debug\C_sharp Tutorial.csprojResolveAssemblyReference.cache
+C:\Users\djani\Documents\Sources\VisualStudio2015\C_sharp Tutorial\C_sharp Tutorial\obj\Debug\C_sharp Tutorial.exe
+C:\Users\djani\Documents\Sources\VisualStudio2015\C_sharp Tutorial\C_sharp Tutorial\obj\Debug\C_sharp Tutorial.pdb
