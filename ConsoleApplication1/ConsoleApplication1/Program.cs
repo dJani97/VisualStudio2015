@@ -5,26 +5,77 @@ using System.Collections.Generic;   // import this if you want to use lists
 
 namespace ConsoleApplication1
 {
+
+    class Animal
+    {
+        // CLASS VARIABLES
+
+        public static int Count = 0;       // you can give variables a default value here, or in class constructor
+
+        public string name;
+        public int age;
+        public float happiness;
+
+        private int a;          // can only be accessed from the same class
+        public int b;           // can be accessed from other classes through class reference
+        static int c;           // not bound to one instance, but shared through all instances of the same kind of class
+        int d;                  // dafaults to private
+
+
+        // CLASS CONSTRUCTORS
+
+        public Animal()
+        {
+            name = "Beni";
+            age = 3;
+            happiness = 0.5f;
+
+            Count++;
+        }
+
+        public Animal(string _name, int _age, float _happiness)
+        {
+            name = _name;
+            age = _age;
+            happiness = _happiness;
+
+            Count++;
+        }
+
+
+        // CLASS METHODS 
+
+        public void Print()
+        {
+            Console.WriteLine("Name: {0}\nAge: {1}\nHappiness: {2}", name, age, happiness);
+        }
+        
+    }
+
     class MainClass
     {
         static void Main(string[] args)
         {
             // CHOSE THE FUNCTION HERE:
-            int choice = 4;
+            int choice = 6;
 
             Breakpoint:
             switch (choice)
             {
                 case 1:
-                    random(true);   break;
+                    random(true);                                           break;
                 case 2:
-                    arrays();   break;
+                    arrays();                                               break;
                 case 3:
-                    lists();    break;
+                    lists();                                                break;
                 case 4:
-                    multi_dimensional_arrays();     break;
+                    multi_dimensional_arrays();                             break;
+                case 5:
+                    classes();                                              break;
+                case 6:
+                    classes_with_constructor();                             break;
                 default:
-                    Console.WriteLine("Undefined case, try again.");    break;
+                    Console.WriteLine("Undefined case, try again.");        break;
             }
 
             Console.WriteLine("\nPress Enter to start again!");
@@ -104,5 +155,32 @@ namespace ConsoleApplication1
             }
         }
 
+        static void classes()
+        {
+            Animal dog = new Animal();      // creating a new instance
+            Animal.Count++;
+            Console.WriteLine(dog.name);
+
+            dog.name = "Doctor";            // you can simply set it equal to things
+            Console.WriteLine(dog.name);
+
+            dog.Print();                    // calling a method from class
+
+            Animal cat = new Animal();
+            Animal.Count++;
+
+            Console.WriteLine("Number of animals: {0}. This line no longer works thanks to modifications in the animal class. ", Animal.Count);
+        }
+
+        static void classes_with_constructor()
+        {
+            Animal dog = new Animal("Dragon", 10, 0.9f);
+            Animal cat = new Animal("Linsy", 4, 0.7f);
+
+            dog.Print();
+            cat.Print();
+
+            Console.WriteLine("Number of animals: {0}", Animal.Count);
+        }
     }
 }
