@@ -5,6 +5,7 @@ using System.Collections.Generic;   // import this if you want to use lists
 
 namespace ConsoleApplication1
 {
+    enum Breed { Bulldog, Boxer, Border_Collie };
 
     class Animal
     {
@@ -51,13 +52,91 @@ namespace ConsoleApplication1
         }
         
     }
+    
+        class Dog : Animal
+        {
+            public int loudness = 1;
+            public Breed breed;
+
+            public Dog()
+            {
+                name = "Beni";
+                age = 3;
+                happiness = 0.5f;
+                Count++;
+            }
+
+            public Dog(string _name, int _age, float _happiness, Breed _breed)
+            {
+                name = _name;
+                age = _age;
+                happiness = _happiness;
+                breed = _breed;
+            }
+
+            public void Bark()
+            {
+                for (int i = 0; i < loudness; i++)
+                    Console.Write("WUF! ");
+                Console.WriteLine();
+                base.happiness += 0.1f;     // if we have an inherited variable, but the class has it's own variable with the same name, thisway we can access the inherited one
+            }
+
+            public void Print()
+            {
+                base.Print();                                           // using base method instead of the new method
+                Console.WriteLine("Breed: {0}", breed);
+            }
+    }       // I used tab to emphasize that it's a child of the Animal Class
+
+        class Cat : Animal
+            {
+                public float cuteness = 0.5f;
+
+                public void Meow()
+                {
+                    Console.WriteLine("Meooow!");
+                }
+            }
+
+    class Player            // this is a demo class for PROPERTIES
+    {
+        private int _health = 100;
+        public int health
+        /*
+         It ensures that health is always a valid value
+         Let's assume that a valid health is between 0 and 100
+        */
+        {
+            get
+            {
+                return _health;
+            }
+            set
+            {
+                if(value<=0) {
+                    _health = 0;
+                } else if(value>=100) {
+                    _health = 100;
+                } else {
+                    _health = value;
+                }
+            }
+        }
+
+
+        public void Damage(int _dmg)
+        {
+            _health -= _dmg;
+        }
+    }
 
     class MainClass
     {
         static void Main(string[] args)
         {
             // CHOSE THE FUNCTION HERE:
-            int choice = 6;
+            int choice = 9;
 
             Breakpoint:
             switch (choice)
@@ -74,6 +153,12 @@ namespace ConsoleApplication1
                     classes();                                              break;
                 case 6:
                     classes_with_constructor();                             break;
+                case 7:
+                    inheritance();                                          break;
+                case 8:
+                    enums();                                                break;
+                case 9:
+                    properties();                                           break;
                 default:
                     Console.WriteLine("Undefined case, try again.");        break;
             }
@@ -181,6 +266,44 @@ namespace ConsoleApplication1
             cat.Print();
 
             Console.WriteLine("Number of animals: {0}", Animal.Count);
+        }
+
+        static void inheritance()
+        {
+            Dog spotty = new Dog();
+            spotty.name = "Spotty";     spotty.age = 6;     spotty.happiness = 0.8f;     spotty.loudness = 3;
+            spotty.Bark();
+            Console.WriteLine("New happyness: {0}", spotty.happiness);
+
+            Cat heisenberg = new Cat();
+            heisenberg.name = "Heisenberg";     heisenberg.age = 9;     heisenberg.happiness = 0.3f;    heisenberg.cuteness = 0.4f;
+            heisenberg.Meow();
+
+        }
+
+        static void enums()
+        {
+            // THE ENUM IS CREATED upp after defining the Main class
+
+            Dog hulk = new Dog("Hulk", 10, 0.8f, Breed.Bulldog);
+            hulk.Print();
+        }
+
+        static void properties()
+        {
+            DateTime current_time = DateTime.Now;        // { Get; }   means it's a read only property
+            Console.WriteLine(current_time);
+
+
+            Player hero = new Player();                  // player has a hidden _health and an exposed method health
+            hero.Damage(30);
+            Console.WriteLine(hero.health);
+            hero.health = 300;
+            Console.WriteLine(hero.health);
+            hero.health -= 200;
+            Console.WriteLine(hero.health);
+
+
         }
     }
 }
