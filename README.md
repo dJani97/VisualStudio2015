@@ -1,4 +1,2 @@
-<h3>
-  VisualStudio2015
-</h3>
-My first C# projects
+# C# archive (2017/Q1)
+An archive of my first C# projects, made with Visual Studio 2015
